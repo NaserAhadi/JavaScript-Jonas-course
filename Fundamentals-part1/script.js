@@ -1,3 +1,5 @@
+// ** 5.Values and Variables ** //
+
 let js = 'amazing'
 // if(js==='amazing') alert('JavaScript is Fun!')
 
@@ -29,7 +31,34 @@ let PI = 3.1415
 // when you name a variable, it should be easy to understand what value the variable is holding.
 // more descriptive variables
 let myFirstJob = 'Civil Engineer'
-let myCurrentJpb = 'Programmer'
+let myCurrentJob = 'Programmer'
 // less descriptive variables
 let job1 = 'Civil Engineer'
 let job2 = 'Programmer'
+
+// ** 7.Data Types ** //
+
+/* 
+example of javascript dynamic typing:
+first we assign a boolean to a variable and then reassign it with a string and everything is ok,
+just because of javascript dynamic typing feature.
+*/
+let javascriptIsFun = true
+console.log(javascriptIsFun);
+console.log('type of javascriptIsFun:',typeof javascriptIsFun);
+
+javascriptIsFun = 'YES'
+console.log('type of javascriptIsFun:',typeof javascriptIsFun);
+
+console.log(typeof 23);
+console.log(typeof 'Naser');
+// when declare an empty variable, its value and type both are undefined!.
+let year;
+console.log(year); // undefined
+console.log(typeof year); // undefined
+
+// bug of type of null: typeof null should return null but it return object!!
+console.log(typeof null);  // object
+
+
+
