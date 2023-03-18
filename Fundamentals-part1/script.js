@@ -6,8 +6,8 @@ let js = 'amazing'
 console.log(40+22-24);
 
 // declaring variables
-let firstName = 'Naser'
-console.log(firstName);
+// let firstName = 'Naser'
+// console.log(firstName);
 
 // variable name can not start with number
 // let 3years = 3;
@@ -66,6 +66,51 @@ const birthDay = 1990;
 // birthDay = 1991 // we get type error: Uncaught TypeError: Assignment to constant variable.
 // const job; // Uncaught SyntaxError: Missing initializer in const declaration
 
-lastName = 'Ahadi'
-console.log('lastName: ',lastName) // Ahadi
+// lastName = 'Ahadi' 
+// console.log('lastName: ',lastName) // Ahadi
+
+// ** 9. Basic Operators ** //
+// Operators basically allows us to transform values or combine multiple values.
+// Categories of operatores: Mathematical or Arithmetic, Assignment, Comparison, Logical, 
+
+// Math operator: (+, -, *, /) 
+//minus
+const now = 2023;
+const ageNaser = now - 1990;
+const ageSarah = now - 2000;
+console.log(ageNaser, ageSarah)
+
+console.log(ageNaser * 2, ageNaser / 10, 2 ** 3, ageNaser + 2);
+// 2 ** 3 means 2 power to three which means 2 * 2 * 2
+
+// concatenating two string with plus operator
+const firstName = 'Naser'
+const lastName = 'Ahadi'
+console.log(firstName + ' ' + lastName)
+// template string:
+console.log(`${firstName} ${lastName}`)
+
+// typeof operator: give us type of value
+console.log(typeof firstName)
+
+// Assignment operator: (=, +=, -=, *=, /=, ++, --)
+// plus operator and assignment operator. 
+let num = 10 + 5
+console.log(num) // 15  => plus operator is precedence to assignment operator.
+num += 10 // num = num + 10 = 25
+console.log(num) // 25
+
+num *= 4 // num = num * 4 = 25 * 4 = 100
+console.log(num) // 100
+num++ // num = num + 1 = 101
+console.log(num) // 101
+num-- // num = num - 1 = 100
+console.log(num) // 100
+num /= 4 // num = num / 4 = 100 / 4 = 25
+console.log(num) // 25
+
+// Comparison operators: (>, <, >=, <=, ==, ===)
+// comparison operators produce Boolean values.
+console.log(ageNaser > ageSarah) // true
+
 
