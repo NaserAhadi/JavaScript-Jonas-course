@@ -61,4 +61,11 @@ console.log(typeof year); // undefined
 console.log(typeof null);  // object
 
 
+// ** 8.let, const and var ** //
+const birthDay = 1990;
+// birthDay = 1991 // we get type error: Uncaught TypeError: Assignment to constant variable.
+// const job; // Uncaught SyntaxError: Missing initializer in const declaration
+
+lastName = 'Ahadi'
+console.log('lastName: ',lastName) // Ahadi
 
