@@ -164,5 +164,69 @@ const markHigherBMI = markBMI > johnBMI
 
 console.log(markBMI, johnBMI, markHigherBMI)
 
+// ** 12. Strings and Template Literals ** //
+/*
+type coercion: in concatenation of number and string, basically JavaScript will simply convert this number to a string, 
+so that it can concatenate them
+*/
 
+const naserAhadi = "I'm " + firstName + ',a ' + (now - birthDay) + ' years old ' + myCurrentJob
+console.log(naserAhadi);
+// template literal
+const naserAhadiNew = `I'm ${firstName},a ${now - birthDay} years old ${myCurrentJob}`
+console.log(naserAhadiNew);
 
+console.log('multiline \n\
+string\n\
+testing')
+
+console.log(`multiline
+string
+testing with template literal`)
+
+// ** 13. Taking Decisions if  else Statements ** //
+const age = 9
+if(age>=18){
+    console.log('you can get drive license');
+} else {
+    const yearsLeft = 18 - age
+    console.log(`you are younge and ${yearsLeft} years left`)
+}
+
+// ** Coding Challenge 2 ** //
+/*
+Use the BMI example from Challenge #1, and the code you already wrote, and improve it.
+Your tasks:
+1. Print a nice output to the console, saying who has the higher BMI. The message
+is either "Mark's BMI is higher than John's!" or "John's BMI is higher than Mark's!"
+2. Use a template literal to include the BMI values in the outputs. Example: "Mark's
+BMI (28.3) is higher than John's (23.9)!"
+Hint: Use an if/else statement 😉
+*/
+
+if(markBMI>johnBMI){
+    console.log(`Mark's BMI ${markBMI} is higher than John's ${johnBMI}!`);
+} else {
+    console.log(`John's BMI ${johnBMI} is higher than Mark's! ${markBMI}`);
+}
+
+// ** 15. Type Conversion and Coercion ** //
+// type conversion: convert data type manually
+// type coercion: the automatic or implicit conversion of values from one data type to another
+
+//type coercion
+console.log('I am ' + 23 + ' years old'); // convert number to string
+console.log('23' - '10' - 3); // 10  -> convert string to number
+console.log('24' / '2'); // 12 -> convert string to number
+console.log('23' * '2'); // 46 -> convert string to number
+console.log('23' > '18'); // true -> convert string to number
+console.log('23' + '10' + 5); // '23105' -> convert number to string
+// only plus operator convert number to string, other operators convert string to number
+
+// type conversion
+const inputYear = '1990'
+console.log(Number(inputYear), inputYear); // 1990, '1990'
+console.log(Number(inputYear) + 5); // 1995
+console.log(Number('Naser')); // NaN
+console.log(typeof NaN); // number
+console.log(String(23), 23); // '23', 23
