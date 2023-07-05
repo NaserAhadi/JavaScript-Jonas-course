@@ -230,3 +230,27 @@ console.log(Number(inputYear) + 5); // 1995
 console.log(Number('Naser')); // NaN
 console.log(typeof NaN); // number
 console.log(String(23), 23); // '23', 23
+
+// ** 16. Truthy and Falsy Values ** //
+// 5 falsy values: 0, '', null, undefined, NaN
+console.log('Boolean(0) :>> ', Boolean(0)); // false
+console.log('Boolean(undefined) :>> ', Boolean(undefined)); // false
+console.log('Boolean(NaN) :>> ', Boolean(NaN)); // false
+console.log('Boolean("naser") :>> ', Boolean("naser")); // true
+console.log('Boolean({}) :>> ', Boolean({})); // true
+console.log('Boolean("") :>> ', Boolean("")); // false
+
+// type coercion into boolean when using logical context(if else statement condition)
+const money=0;
+if(money){
+    console.log('Good, You Have Money');
+} else {
+    console.log('You should get a job!')
+}
+
+let height;
+if(height){
+    console.log('Yay! height is defined')
+} else {
+    console.log('height variable is UNDEFINED')
+}
