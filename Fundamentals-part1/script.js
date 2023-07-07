@@ -254,3 +254,26 @@ if(height){
 } else {
     console.log('height variable is UNDEFINED')
 }
+
+// ** 17. Equality Operators == vs. === ** //
+// equality operator
+const personAge = 18
+if(personAge === 18) console.log('you are an adult :D, strict equality');
+if(personAge == 18) console.log('you are an adult :D, loose equality');
+
+const favoriteNumber = prompt(`what's your favorite number?`)
+if(favoriteNumber === 20){
+    console.log('yes 20 is a cool number');
+} else if(favoriteNumber === 9) {
+    console.log('9 is cool number too');
+} else {
+    console.log('number is not 9 and 20');
+}
+
+// different operator (with excalmation mark)
+// strict different operator !==
+// loose different operator !=
+if(favoriteNumber !== 20) console.log('why not 20 ?');
+
+
+//** 18. Boolean Logic **//
