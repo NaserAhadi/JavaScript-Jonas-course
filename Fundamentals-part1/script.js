@@ -261,19 +261,37 @@ const personAge = 18
 if(personAge === 18) console.log('you are an adult :D, strict equality');
 if(personAge == 18) console.log('you are an adult :D, loose equality');
 
-const favoriteNumber = prompt(`what's your favorite number?`)
-if(favoriteNumber === 20){
-    console.log('yes 20 is a cool number');
-} else if(favoriteNumber === 9) {
-    console.log('9 is cool number too');
-} else {
-    console.log('number is not 9 and 20');
-}
+// const favoriteNumber = prompt(`what's your favorite number?`)
+// if(favoriteNumber === 20){
+//     console.log('yes 20 is a cool number');
+// } else if(favoriteNumber === 9) {
+//     console.log('9 is cool number too');
+// } else {
+//     console.log('number is not 9 and 20');
+// }
 
 // different operator (with excalmation mark)
 // strict different operator !==
 // loose different operator !=
-if(favoriteNumber !== 20) console.log('why not 20 ?');
+// if(favoriteNumber !== 20) console.log('why not 20 ?');
 
 
 //** 18. Boolean Logic **//
+
+//** 19. Logical Operators **//
+const hasDriversLicense = true // variable A
+const hasGoodVision = false // variable B
+const isTired = true // variable C
+
+// AND operator with NOT operator
+if(hasDriversLicense && hasGoodVision && !isTired){
+    console.log('you able to drive');
+} else {
+    console.log('someone else should drive...');
+}
+
+// OR operator
+console.log(hasDriversLicense || hasGoodVision || isTired); // true
+
+
+
