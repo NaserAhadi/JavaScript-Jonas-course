@@ -358,3 +358,63 @@ if(averageOfDolphins>averageOfKoalas && averageOfDolphins>=100){
     console.log('no team wins');
 }
 
+//** 21. The switch Statement **//
+const day = 'sunday'
+switch(day){
+    case 'monday': // day === 'monday'
+        console.log('it is monday');
+        console.log(`let's go to vandar`);
+        break;
+    case 'tuesday':
+        console.log('it is tuesday');
+        break;
+    case 'wednesday':
+        console.log('it is wednesday');
+        break;
+    case 'thursday':
+    case 'friday':
+        console.log('it is the weekend, enjoy');
+        break;
+    case 'saturday':
+        console.log('it is saturday');
+        break;
+    case 'sunday':
+        console.log('it is sunday');
+        break;
+    default:
+        console.log('it is not a valid day');
+}
+
+// if else statement of above logic
+if(day==='monday'){
+    console.log('it is monday');
+    console.log(`let's go to vandar`);
+} else if(day==='tuesday') {
+    console.log('it is tuesday');
+} else if(day==='wednesday') {
+    console.log('it is wednesday');
+} else if(day==='thursday' || day==='friday') {
+    console.log('it is the weekend, enjoy');
+} else if(day==='saturday') {
+    console.log('it is saturday');
+} else if(day==='sunday') {
+    console.log('it is sunday');
+} else {
+    console.log('it is not a valid day');
+}
+
+// * 22. Statements and Expressions * //
+// So essentially, an expression is a piece of code that produces a value.
+3 + 4 // is expression because it produces a value
+1991 // is expression because it produces a value
+true && false // is expression because it produces a value
+
+// statement is like a bigger piece of code that is executed and 
+// which does not produce a value on itself.
+if(23 > 10){
+    const str = '23 is bigger than 10'
+}
+//so basically, whenever something ends with a semicolon,that's then a statement.
+// JavaScript expects statements and expressions in different places.
+console.log(`I am ${2023 - 1990} years old`);
+// in template literal we should put expression not a statement
