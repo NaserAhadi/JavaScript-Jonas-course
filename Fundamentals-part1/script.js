@@ -1,9 +1,9 @@
 // ** 5.Values and Variables ** //
 
-let js = 'amazing'
+let js = "amazing";
 // if(js==='amazing') alert('JavaScript is Fun!')
 
-console.log(40+22-24);
+console.log(40 + 22 - 24);
 
 // declaring variables
 // let firstName = 'Naser'
@@ -14,27 +14,27 @@ console.log(40+22-24);
 
 // variable names contain only: letters, numbers, under score(_) and dollar sign($)
 // let my&variable = 'test'
-let my_variable$ = 'that ok'
+let my_variable$ = "that ok";
 
 // variable names should not be JavaScript reserved keyword like: new, function, name, etc.
 // let function ='something'
 // let new ='something'
-let name = 'my name'
+let name = "my name";
 console.log(name);
 
 // variable names should NOT start with uppercase(it's not illegal but it's a convention)
-let Person = 'someone'
+let Person = "someone";
 // we choose all in uppercase letters for constant that we know will never change like: the number PI =3.1415 (convention)
-let PI = 3.1415
+let PI = 3.1415;
 
 // variable names should be descriptive
 // when you name a variable, it should be easy to understand what value the variable is holding.
 // more descriptive variables
-let myFirstJob = 'Civil Engineer'
-let myCurrentJob = 'Programmer'
+let myFirstJob = "Civil Engineer";
+let myCurrentJob = "Programmer";
 // less descriptive variables
-let job1 = 'Civil Engineer'
-let job2 = 'Programmer'
+let job1 = "Civil Engineer";
+let job2 = "Programmer";
 
 // ** 7.Data Types ** //
 
@@ -43,75 +43,74 @@ example of javascript dynamic typing:
 first we assign a boolean to a variable and then reassign it with a string and everything is ok,
 just because of javascript dynamic typing feature.
 */
-let javascriptIsFun = true
+let javascriptIsFun = true;
 console.log(javascriptIsFun);
-console.log('type of javascriptIsFun:',typeof javascriptIsFun);
+console.log("type of javascriptIsFun:", typeof javascriptIsFun);
 
-javascriptIsFun = 'YES'
-console.log('type of javascriptIsFun:',typeof javascriptIsFun);
+javascriptIsFun = "YES";
+console.log("type of javascriptIsFun:", typeof javascriptIsFun);
 
 console.log(typeof 23);
-console.log(typeof 'Naser');
+console.log(typeof "Naser");
 // when declare an empty variable, its value and type both are undefined!.
 let year;
 console.log(year); // undefined
 console.log(typeof year); // undefined
 
 // bug of type of null: typeof null should return null but it return object!!
-console.log(typeof null);  // object
-
+console.log(typeof null); // object
 
 // ** 8.let, const and var ** //
 const birthDay = 1990;
 // birthDay = 1991 // we get type error: Uncaught TypeError: Assignment to constant variable.
 // const job; // Uncaught SyntaxError: Missing initializer in const declaration
 
-// lastName = 'Ahadi' 
+// lastName = 'Ahadi'
 // console.log('lastName: ',lastName) // Ahadi
 
 // ** 9. Basic Operators ** //
 // Operators basically allows us to transform values or combine multiple values.
-// Categories of operatores: Mathematical or Arithmetic, Assignment, Comparison, Logical, 
+// Categories of operatores: Mathematical or Arithmetic, Assignment, Comparison, Logical,
 
-// Math operator: (+, -, *, /) 
+// Math operator: (+, -, *, /)
 //minus
 const now = 2023;
 const ageNaser = now - 1990;
 const ageSarah = now - 2000;
-console.log(ageNaser, ageSarah)
+console.log(ageNaser, ageSarah);
 
 console.log(ageNaser * 2, ageNaser / 10, 2 ** 3, ageNaser + 2);
 // 2 ** 3 means 2 power to three which means 2 * 2 * 2
 
 // concatenating two string with plus operator
-const firstName = 'Naser'
-const lastName = 'Ahadi'
-console.log(firstName + ' ' + lastName)
+const firstName = "Naser";
+const lastName = "Ahadi";
+console.log(firstName + " " + lastName);
 // template string:
-console.log(`${firstName} ${lastName}`)
+console.log(`${firstName} ${lastName}`);
 
 // typeof operator: give us type of value
-console.log(typeof firstName)
+console.log(typeof firstName);
 
 // Assignment operator: (=, +=, -=, *=, /=, ++, --)
-// plus operator and assignment operator. 
-let num = 10 + 5
-console.log(num) // 15  => plus operator is precedence to assignment operator.
-num += 10 // num = num + 10 = 25
-console.log(num) // 25
+// plus operator and assignment operator.
+let num = 10 + 5;
+console.log(num); // 15  => plus operator is precedence to assignment operator.
+num += 10; // num = num + 10 = 25
+console.log(num); // 25
 
-num *= 4 // num = num * 4 = 25 * 4 = 100
-console.log(num) // 100
-num++ // num = num + 1 = 101
-console.log(num) // 101
-num-- // num = num - 1 = 100
-console.log(num) // 100
-num /= 4 // num = num / 4 = 100 / 4 = 25
-console.log(num) // 25
+num *= 4; // num = num * 4 = 25 * 4 = 100
+console.log(num); // 100
+num++; // num = num + 1 = 101
+console.log(num); // 101
+num--; // num = num - 1 = 100
+console.log(num); // 100
+num /= 4; // num = num / 4 = 100 / 4 = 25
+console.log(num); // 25
 
 // Comparison operators: (>, <, >=, <=, ==, ===)
 // comparison operators produce Boolean values.
-console.log(ageNaser > ageSarah) // true
+console.log(ageNaser > ageSarah); // true
 
 // ** 10. Operator Precedence ** //
 /*
@@ -125,14 +124,13 @@ You just have to have a general idea of which operators are executed first.
 So usually all the math operators are executed before the comparison operators for example.
 */
 
-let x,y;
-x = y = 25 - 10 - 5 
+let x, y;
+x = y = 25 - 10 - 5;
 console.log(x, y);
 
 // const averageAge = ageNaser + ageSarah / 2  // not ok, result 44.5 is not correct
-const averageAge = (ageNaser + ageSarah) / 2   // ok, result is 28
+const averageAge = (ageNaser + ageSarah) / 2; // ok, result is 28
 console.log(ageNaser, ageSarah, averageAge);
-
 
 // ** Coding Challenge 1 ** //
 /*
@@ -147,22 +145,22 @@ Your tasks:
 Test data:
 Data 1: Marks weights 78 kg and is 1.69 m tall. John weights 92 kg and is 1.95 m tall.
 Data 2: Marks weights 95 kg and is 1.88 m tall. John weights 85 kg and is 1.76 m tall.
-*/ 
+*/
 // const markMass = 78
 // const markHeight = 1.69
 // const johnMass = 92
 // const johnHeight = 1.95
 
-const markMass = 95
-const markHeight = 1.88
-const johnMass = 85
-const johnHeight = 1.76
+const markMass = 95;
+const markHeight = 1.88;
+const johnMass = 85;
+const johnHeight = 1.76;
 
-const markBMI = markMass / (markHeight**2)
-const johnBMI = johnMass / (johnHeight**2)
-const markHigherBMI = markBMI > johnBMI
+const markBMI = markMass / markHeight ** 2;
+const johnBMI = johnMass / johnHeight ** 2;
+const markHigherBMI = markBMI > johnBMI;
 
-console.log(markBMI, johnBMI, markHigherBMI)
+console.log(markBMI, johnBMI, markHigherBMI);
 
 // ** 12. Strings and Template Literals ** //
 /*
@@ -170,27 +168,32 @@ type coercion: in concatenation of number and string, basically JavaScript will 
 so that it can concatenate them
 */
 
-const naserAhadi = "I'm " + firstName + ',a ' + (now - birthDay) + ' years old ' + myCurrentJob
+const naserAhadi =
+  "I'm " + firstName + ",a " + (now - birthDay) + " years old " + myCurrentJob;
 console.log(naserAhadi);
 // template literal
-const naserAhadiNew = `I'm ${firstName},a ${now - birthDay} years old ${myCurrentJob}`
+const naserAhadiNew = `I'm ${firstName},a ${
+  now - birthDay
+} years old ${myCurrentJob}`;
 console.log(naserAhadiNew);
 
-console.log('multiline \n\
+console.log(
+  "multiline \n\
 string\n\
-testing')
+testing"
+);
 
 console.log(`multiline
 string
-testing with template literal`)
+testing with template literal`);
 
 // ** 13. Taking Decisions if  else Statements ** //
-const age = 9
-if(age>=18){
-    console.log('you can get drive license');
+const age = 9;
+if (age >= 18) {
+  console.log("you can get drive license");
 } else {
-    const yearsLeft = 18 - age
-    console.log(`you are younge and ${yearsLeft} years left`)
+  const yearsLeft = 18 - age;
+  console.log(`you are younge and ${yearsLeft} years left`);
 }
 
 // ** Coding Challenge 2 ** //
@@ -204,10 +207,10 @@ BMI (28.3) is higher than John's (23.9)!"
 Hint: Use an if/else statement 😉
 */
 
-if(markBMI>johnBMI){
-    console.log(`Mark's BMI ${markBMI} is higher than John's ${johnBMI}!`);
+if (markBMI > johnBMI) {
+  console.log(`Mark's BMI ${markBMI} is higher than John's ${johnBMI}!`);
 } else {
-    console.log(`John's BMI ${johnBMI} is higher than Mark's! ${markBMI}`);
+  console.log(`John's BMI ${johnBMI} is higher than Mark's! ${markBMI}`);
 }
 
 // ** 15. Type Conversion and Coercion ** //
@@ -215,51 +218,51 @@ if(markBMI>johnBMI){
 // type coercion: the automatic or implicit conversion of values from one data type to another
 
 //type coercion
-console.log('I am ' + 23 + ' years old'); // convert number to string
-console.log('23' - '10' - 3); // 10  -> convert string to number
-console.log('24' / '2'); // 12 -> convert string to number
-console.log('23' * '2'); // 46 -> convert string to number
-console.log('23' > '18'); // true -> convert string to number
-console.log('23' + '10' + 5); // '23105' -> convert number to string
+console.log("I am " + 23 + " years old"); // convert number to string
+console.log("23" - "10" - 3); // 10  -> convert string to number
+console.log("24" / "2"); // 12 -> convert string to number
+console.log("23" * "2"); // 46 -> convert string to number
+console.log("23" > "18"); // true -> convert string to number
+console.log("23" + "10" + 5); // '23105' -> convert number to string
 // only plus operator convert number to string, other operators convert string to number
 
 // type conversion
-const inputYear = '1990'
+const inputYear = "1990";
 console.log(Number(inputYear), inputYear); // 1990, '1990'
 console.log(Number(inputYear) + 5); // 1995
-console.log(Number('Naser')); // NaN
+console.log(Number("Naser")); // NaN
 console.log(typeof NaN); // number
 console.log(String(23), 23); // '23', 23
 
 // ** 16. Truthy and Falsy Values ** //
 // 5 falsy values: 0, '', null, undefined, NaN
-console.log('Boolean(0) :>> ', Boolean(0)); // false
-console.log('Boolean(undefined) :>> ', Boolean(undefined)); // false
-console.log('Boolean(NaN) :>> ', Boolean(NaN)); // false
+console.log("Boolean(0) :>> ", Boolean(0)); // false
+console.log("Boolean(undefined) :>> ", Boolean(undefined)); // false
+console.log("Boolean(NaN) :>> ", Boolean(NaN)); // false
 console.log('Boolean("naser") :>> ', Boolean("naser")); // true
-console.log('Boolean({}) :>> ', Boolean({})); // true
+console.log("Boolean({}) :>> ", Boolean({})); // true
 console.log('Boolean("") :>> ', Boolean("")); // false
 
 // type coercion into boolean when using logical context(if else statement condition)
-const money=0;
-if(money){
-    console.log('Good, You Have Money');
+const money = 0;
+if (money) {
+  console.log("Good, You Have Money");
 } else {
-    console.log('You should get a job!')
+  console.log("You should get a job!");
 }
 
 let height;
-if(height){
-    console.log('Yay! height is defined')
+if (height) {
+  console.log("Yay! height is defined");
 } else {
-    console.log('height variable is UNDEFINED')
+  console.log("height variable is UNDEFINED");
 }
 
 // ** 17. Equality Operators == vs. === ** //
 // equality operator
-const personAge = 18
-if(personAge === 18) console.log('you are an adult :D, strict equality');
-if(personAge == 18) console.log('you are an adult :D, loose equality');
+const personAge = 18;
+if (personAge === 18) console.log("you are an adult :D, strict equality");
+if (personAge == 18) console.log("you are an adult :D, loose equality");
 
 // const favoriteNumber = prompt(`what's your favorite number?`)
 // if(favoriteNumber === 20){
@@ -275,24 +278,22 @@ if(personAge == 18) console.log('you are an adult :D, loose equality');
 // loose different operator !=
 // if(favoriteNumber !== 20) console.log('why not 20 ?');
 
-
 //** 18. Boolean Logic **//
 
 //** 19. Logical Operators **//
-const hasDriversLicense = true // variable A
-const hasGoodVision = false // variable B
-const isTired = true // variable C
+const hasDriversLicense = true; // variable A
+const hasGoodVision = false; // variable B
+const isTired = true; // variable C
 
 // AND operator with NOT operator
-if(hasDriversLicense && hasGoodVision && !isTired){
-    console.log('you able to drive');
+if (hasDriversLicense && hasGoodVision && !isTired) {
+  console.log("you able to drive");
 } else {
-    console.log('someone else should drive...');
+  console.log("someone else should drive...");
 }
 
 // OR operator
 console.log(hasDriversLicense || hasGoodVision || isTired); // true
-
 
 //** 20. Coding Challenge #3 **//
 /*
@@ -346,75 +347,92 @@ Test data:
 // }
 
 // bonus 2
-const averageOfDolphins = (97+112+101)/3
-const averageOfKoalas = (109+95+106)/3
-if(averageOfDolphins>averageOfKoalas && averageOfDolphins>=100){
-    console.log('Dolphins are winner');
-} else if(averageOfDolphins<averageOfKoalas && averageOfKoalas>=100){
-    console.log('Koalas are winner');
-} else if(averageOfDolphins===averageOfKoalas && averageOfKoalas>=100) {
-    console.log('it is a draw', averageOfDolphins);
+const averageOfDolphins = (97 + 112 + 101) / 3;
+const averageOfKoalas = (109 + 95 + 106) / 3;
+if (averageOfDolphins > averageOfKoalas && averageOfDolphins >= 100) {
+  console.log("Dolphins are winner");
+} else if (averageOfDolphins < averageOfKoalas && averageOfKoalas >= 100) {
+  console.log("Koalas are winner");
+} else if (averageOfDolphins === averageOfKoalas && averageOfKoalas >= 100) {
+  console.log("it is a draw", averageOfDolphins);
 } else {
-    console.log('no team wins');
+  console.log("no team wins");
 }
 
 //** 21. The switch Statement **//
-const day = 'sunday'
-switch(day){
-    case 'monday': // day === 'monday'
-        console.log('it is monday');
-        console.log(`let's go to vandar`);
-        break;
-    case 'tuesday':
-        console.log('it is tuesday');
-        break;
-    case 'wednesday':
-        console.log('it is wednesday');
-        break;
-    case 'thursday':
-    case 'friday':
-        console.log('it is the weekend, enjoy');
-        break;
-    case 'saturday':
-        console.log('it is saturday');
-        break;
-    case 'sunday':
-        console.log('it is sunday');
-        break;
-    default:
-        console.log('it is not a valid day');
+const day = "sunday";
+switch (day) {
+  case "monday": // day === 'monday'
+    console.log("it is monday");
+    console.log(`let's go to vandar`);
+    break;
+  case "tuesday":
+    console.log("it is tuesday");
+    break;
+  case "wednesday":
+    console.log("it is wednesday");
+    break;
+  case "thursday":
+  case "friday":
+    console.log("it is the weekend, enjoy");
+    break;
+  case "saturday":
+    console.log("it is saturday");
+    break;
+  case "sunday":
+    console.log("it is sunday");
+    break;
+  default:
+    console.log("it is not a valid day");
 }
 
 // if else statement of above logic
-if(day==='monday'){
-    console.log('it is monday');
-    console.log(`let's go to vandar`);
-} else if(day==='tuesday') {
-    console.log('it is tuesday');
-} else if(day==='wednesday') {
-    console.log('it is wednesday');
-} else if(day==='thursday' || day==='friday') {
-    console.log('it is the weekend, enjoy');
-} else if(day==='saturday') {
-    console.log('it is saturday');
-} else if(day==='sunday') {
-    console.log('it is sunday');
+if (day === "monday") {
+  console.log("it is monday");
+  console.log(`let's go to vandar`);
+} else if (day === "tuesday") {
+  console.log("it is tuesday");
+} else if (day === "wednesday") {
+  console.log("it is wednesday");
+} else if (day === "thursday" || day === "friday") {
+  console.log("it is the weekend, enjoy");
+} else if (day === "saturday") {
+  console.log("it is saturday");
+} else if (day === "sunday") {
+  console.log("it is sunday");
 } else {
-    console.log('it is not a valid day');
+  console.log("it is not a valid day");
 }
 
 // * 22. Statements and Expressions * //
 // So essentially, an expression is a piece of code that produces a value.
-3 + 4 // is expression because it produces a value
-1991 // is expression because it produces a value
-true && false // is expression because it produces a value
+3 + 4; // is expression because it produces a value
+1991; // is expression because it produces a value
+true && false; // is expression because it produces a value
 
-// statement is like a bigger piece of code that is executed and 
+// statement is like a bigger piece of code that is executed and
 // which does not produce a value on itself.
-if(23 > 10){
-    const str = '23 is bigger than 10'
+if (23 > 10) {
+  const str = "23 is bigger than 10";
 }
 //so basically, whenever something ends with a semicolon,that's then a statement.
 // JavaScript expects statements and expressions in different places.
 console.log(`I am ${2023 - 1990} years old`);
 // in template literal we should put expression not a statement
+
+// * 23. The Conditional (Ternary) Operator * //
+const ageOfPerson = 12;
+// ageOfPerson>=18 ? console.log('you can drink wine') : console.log('you should drink water');
+
+// ternary operator is an expression (unlike if else statement):
+const drink = ageOfPerson >= 18 ? "wine" : "water";
+console.log(`I like to drink ${ageOfPerson >= 18 ? "wine" : "water"}`)
+
+// Coding Challenge #4
+// const bill = 275
+// const bill = 40
+const bill = 430
+const tip = bill >= 50 && bill <=300 ? 0.15 * bill : 0.2 * bill
+const finalBill = tip + bill
+console.log('tip :>> ', tip);
+console.log('finalBill :>> ', finalBill);
