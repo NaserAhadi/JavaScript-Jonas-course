@@ -144,3 +144,29 @@ const avgDolphins = calcAverage(85, 54, 41);
 const avgKoalas = calcAverage(23, 34, 27);
 // Dolphins win (60 vs. 28)
 checkWinner(avgDolphins, avgKoalas);
+
+
+//** 9. Introduction to Arrays **/
+const friendOne= 'Abbas'
+const friendTwo= 'Ali'
+const friendThree= 'Amin'
+
+// creating array with square brackets which is called literal syntax
+const friends = ['Abbas', 'Ali', 'Amin']
+console.log(friends); // ['Abbas', 'Ali', 'Amin']
+
+// creating array with Array function
+const years= new Array(1990,1991,1992)
+console.log(years); // [1990, 1991, 1992]
+
+console.log(friends[0]); // Abbas
+console.log(friends.length); // 3
+console.log(friends[friends.length - 1]); // Amin
+
+friends[2] = 'Farzan'
+console.log(friends); // ['Abbas', 'Ali', 'Farzan']
+
+// friends = ['Bob', 'Marry']
+const myFirstName = 'Naser'
+const naser = [myFirstName, 'Ahadi', 2023-1990,'programmer', friends]
+console.log(naser); // ['Naser', 'Ahadi', 33, 'programmer', Array(3)]
