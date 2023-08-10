@@ -145,28 +145,79 @@ const avgKoalas = calcAverage(23, 34, 27);
 // Dolphins win (60 vs. 28)
 checkWinner(avgDolphins, avgKoalas);
 
-
 //** 9. Introduction to Arrays **/
-const friendOne= 'Abbas'
-const friendTwo= 'Ali'
-const friendThree= 'Amin'
+const friendOne = "Abbas";
+const friendTwo = "Ali";
+const friendThree = "Amin";
 
 // creating array with square brackets which is called literal syntax
-const friends = ['Abbas', 'Ali', 'Amin']
+const friends = ["Abbas", "Ali", "Amin"];
 console.log(friends); // ['Abbas', 'Ali', 'Amin']
 
 // creating array with Array function
-const years= new Array(1990,1991,1992)
+const years = new Array(1990, 1991, 1992);
 console.log(years); // [1990, 1991, 1992]
 
 console.log(friends[0]); // Abbas
 console.log(friends.length); // 3
 console.log(friends[friends.length - 1]); // Amin
 
-friends[2] = 'Farzan'
+friends[2] = "Farzan";
 console.log(friends); // ['Abbas', 'Ali', 'Farzan']
 
 // friends = ['Bob', 'Marry']
-const myFirstName = 'Naser'
-const naser = [myFirstName, 'Ahadi', 2023-1990,'programmer', friends]
+const myFirstName = "Naser";
+const naser = [myFirstName, "Ahadi", 2023 - 1990, "programmer", friends];
 console.log(naser); // ['Naser', 'Ahadi', 33, 'programmer', Array(3)]
+
+// ** 10. Basic Array Operations (Methods) **//
+// Add elements to array:
+// push method add element to end of array
+friends.push("Hamidreza");
+console.log(friends); // ["Abbas", "Ali", "Farzan", "Hamidreza"];
+
+// unshift method add element to the beginning of aray
+friends.unshift("Shahram");
+console.log(friends); // ["Shahram", "Abbas", "Ali", "Farzan", "Hamidreza"];
+
+// push and unshift method mutate the original array and return the new array length
+const newLength = friends.push("Mohammad");
+console.log(newLength); // 6
+console.log(friends); // ["Shahram", "Abbas", "Ali", "Farzan", "Hamidreza", "Mohammad"];
+
+// Remove elements
+// pop method remove element from the last of array and return the popped element
+friends.pop()
+console.log(friends); // ["Shahram", "Abbas", "Ali", "Farzan", "Hamidreza"];
+const poppedElement = friends.pop()
+console.log(poppedElement); // Hamidreza
+console.log(friends); // ["Shahram", "Abbas", "Ali", "Farzan"];
+
+// shift method removes element from the beginning of array and return the removed element
+friends.shift()
+console.log(friends); // ["Abbas", "Ali", "Farzan"];
+const removedElement = friends.shift() 
+console.log(removedElement); // Abbas
+console.log(friends); // ["Ali", "Farzan"];
+
+// indexOf method return the index of element in array 
+console.log(friends.indexOf('Farzan')); // 1
+// if there is no such element it return -1
+console.log(friends.indexOf('Abbas')); // -1
+
+// includes method return true if there is element in array otherwise return false
+console.log(friends.includes('Ali')); // true
+console.log(friends.includes('Abbas')); // false
+// it check element in strict equality way
+friends.push(23)
+console.log(friends); // ["Ali", "Farzan", 23]
+console.log(friends.includes('23')); // false
+console.log(friends.includes(23)); // true
+
+if(friends.includes('Ali')){
+  console.log('You have a friend called Ali');
+}
+
+
+
+
