@@ -187,37 +187,71 @@ console.log(friends); // ["Shahram", "Abbas", "Ali", "Farzan", "Hamidreza", "Moh
 
 // Remove elements
 // pop method remove element from the last of array and return the popped element
-friends.pop()
+friends.pop();
 console.log(friends); // ["Shahram", "Abbas", "Ali", "Farzan", "Hamidreza"];
-const poppedElement = friends.pop()
+const poppedElement = friends.pop();
 console.log(poppedElement); // Hamidreza
 console.log(friends); // ["Shahram", "Abbas", "Ali", "Farzan"];
 
 // shift method removes element from the beginning of array and return the removed element
-friends.shift()
+friends.shift();
 console.log(friends); // ["Abbas", "Ali", "Farzan"];
-const removedElement = friends.shift() 
+const removedElement = friends.shift();
 console.log(removedElement); // Abbas
 console.log(friends); // ["Ali", "Farzan"];
 
-// indexOf method return the index of element in array 
-console.log(friends.indexOf('Farzan')); // 1
+// indexOf method return the index of element in array
+console.log(friends.indexOf("Farzan")); // 1
 // if there is no such element it return -1
-console.log(friends.indexOf('Abbas')); // -1
+console.log(friends.indexOf("Abbas")); // -1
 
 // includes method return true if there is element in array otherwise return false
-console.log(friends.includes('Ali')); // true
-console.log(friends.includes('Abbas')); // false
+console.log(friends.includes("Ali")); // true
+console.log(friends.includes("Abbas")); // false
 // it check element in strict equality way
-friends.push(23)
+friends.push(23);
 console.log(friends); // ["Ali", "Farzan", 23]
-console.log(friends.includes('23')); // false
+console.log(friends.includes("23")); // false
 console.log(friends.includes(23)); // true
 
-if(friends.includes('Ali')){
-  console.log('You have a friend called Ali');
+if (friends.includes("Ali")) {
+  console.log("You have a friend called Ali");
 }
 
+//** 11. Coding Challenge #2 **/
+/*
+Steven is still building his tip calculator, using the same rules as before: Tip 15% of
+the bill if the bill value is between 50 and 300, and if the value is different, the tip is
+20%.
 
+Your tasks:
+1. Write a function 'calcTip' that takes any bill value as an input and returns
+the corresponding tip, calculated based on the rules above (you can check out
+the code from first tip calculator challenge if you need to). Use the function
+type you like the most. Test the function using a bill value of 100
 
+2. And now let's use arrays! So create an array 'bills' containing the test data
+below
 
+3. Create an array 'tips' containing the tip value for each bill, calculated from
+the function you created before
+
+4. Bonus: Create an array 'total' containing the total values, so the bill + tip
+
+Test data: 125, 555 and 44
+*/
+
+function calcTip(billValue) {
+  if (billValue >= 50 && billValue <= 300) {
+    return billValue * 0.15;
+  } else {
+    return billValue * 0.2;
+  }
+}
+
+const bills = [125, 555, 44];
+const tips = [calcTip(bills[0]), calcTip(bills[1]), calcTip(bills[2])];
+const totals = [bills[0] + tips[0], bills[1] + tips[1], bills[2] + tips[2]];
+
+console.log("tips", tips); // [18.75, 111, 8.8];
+console.log("totals", totals); // [143.75, 666, 52.8];
