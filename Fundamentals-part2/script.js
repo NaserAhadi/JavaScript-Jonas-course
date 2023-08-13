@@ -255,3 +255,63 @@ const totals = [bills[0] + tips[0], bills[1] + tips[1], bills[2] + tips[2]];
 
 console.log("tips", tips); // [18.75, 111, 8.8];
 console.log("totals", totals); // [143.75, 666, 52.8];
+
+//** 12. Introduction to Objects **/
+// creating literal syntax object.
+const naserObj = {
+  firstName: "Naser",
+  lastName: "Ahadi",
+  age: 2023 - 1990,
+  job: "programmer",
+  friends: ["Abbas", "Ali", "Amin"],
+};
+
+/** 13. Dot vs. Bracket Notation **/
+// how retrieve element from an object
+// dot notation
+console.log(naserObj.job); // programmer
+
+// bracket notation
+console.log(naserObj["job"]); // programmer
+
+// bracket notation vs dot: in dot notation you should put final property
+// in bracket notation you can put an expression that compute a value
+// example:
+const nameKey = "Name";
+console.log(naserObj["first" + nameKey]); // Naser
+console.log(naserObj["last" + nameKey]); // Ahadi
+// console.log(naserObj.'first' + nameKey); // doesn't work in dot notation
+
+// const interestedIn = prompt(`what do you want to know about Naser? name, job, age, friends`)
+// console.log(interestedIn);
+// if(naserObj[interestedIn]){
+//   console.log(naserObj[interestedIn]);
+// } else {
+//   console.log('wrong request! choose between name, job, age, friends');
+// }
+
+// Add element to object:
+naserObj.location = "Tehran";
+naserObj["email"] = "naserahadi95@gmail.com";
+console.log(naserObj);
+/*
+{
+  "firstName": "Naser",
+  "lastName": "Ahadi",
+  "age": 33,
+  "job": "programmer",
+  "friends": [
+      "Abbas",
+      "Ali",
+      "Amin"
+  ],
+  "location": "Tehran",
+  "email": "naserahadi95@gmail.com"
+}
+*/
+
+// challenge: write below sentence
+// "Naser has 3 friends, and his best firend is called Abbas"
+console.log(
+  `${naserObj.firstName} has ${naserObj.friends.length} friends, and his best firend is called ${naserObj.friends[0]}`
+);
