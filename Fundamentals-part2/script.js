@@ -315,3 +315,72 @@ console.log(naserObj);
 console.log(
   `${naserObj.firstName} has ${naserObj.friends.length} friends, and his best firend is called ${naserObj.friends[0]}`
 );
+
+//** 14. Object Methods **//
+
+// as we know object contains key value pairs, and also we know function expression return a value
+// so we can create a key and attach a function expression to it which it returns a value.
+// So any function that is attached to an object is called a 'method'.
+
+// notic: function declaration is work here when we attach it to a key.
+
+const naserObj2 = {
+  firstName: "Naser",
+  lastName: "Ahadi",
+  birthYear: 1990,
+  job: "programmer",
+  friends: ["Abbas", "Ali", "Amin"],
+  hasDriversLicense: true,
+  // calcAge: function (birthYear) {
+  //   return 2037 - birthYear;
+  // },
+  // testFunctionDeclaration: function calcAge2(birthYear) {
+  //   return 2037 - birthYear;
+  // },
+  // calcAge2: function(){
+  //   console.log(this);
+  //   return 2037-this.birthYear
+  // },
+  calcAge: function(){
+    this.age = 2037 - this.birthYear
+    return this.age
+  },
+  getSummary: function(){
+    return `${this.firstName} is a ${this.calcAge()}-year old ${this.job}, and he has ${this.hasDriversLicense?'a':'no'} driver's license`
+  }
+};
+
+// console.log(naserObj2.calcAge(1990)); // 47
+// console.log(naserObj2['calcAge'](1991)); // 46
+// console.log(naserObj2.testFunctionDeclaration(1980)); // 57
+
+// JavaScript gives us access to other property from the method by 'this' keyword.
+// 'this' keyword is equal to the object that is calling the method.
+// console.log(naserObj2.calcAge2()); // 47
+/*
+{
+  "firstName": "Naser",
+  "lastName": "Ahadi",
+  "birthYear": 1990,
+  "job": "programmer",
+  "friends": [
+      "Abbas",
+      "Ali",
+      "Amin"
+  ],
+  "hasDriversLicense": true
+}
+*/
+
+// if we call calcAge method 4 times, it should better to store the computed result as 
+// a property so there is no need to calculate age 4 times and return the age from 
+// the computed property.
+console.log(naserObj2.calcAge()); // 47
+console.log(naserObj2.age); // 47
+console.log(naserObj2.age); // 47
+console.log(naserObj2.age); // 47
+console.log(naserObj2.age); // 47
+
+// challenge: write a method.
+// "Naser is a 47-year old programmer, and he has a/no driver's license"
+console.log(naserObj2.getSummary());
