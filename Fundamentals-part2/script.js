@@ -341,13 +341,15 @@ const naserObj2 = {
   //   console.log(this);
   //   return 2037-this.birthYear
   // },
-  calcAge: function(){
-    this.age = 2037 - this.birthYear
-    return this.age
+  calcAge: function () {
+    this.age = 2037 - this.birthYear;
+    return this.age;
   },
-  getSummary: function(){
-    return `${this.firstName} is a ${this.calcAge()}-year old ${this.job}, and he has ${this.hasDriversLicense?'a':'no'} driver's license`
-  }
+  getSummary: function () {
+    return `${this.firstName} is a ${this.calcAge()}-year old ${
+      this.job
+    }, and he has ${this.hasDriversLicense ? "a" : "no"} driver's license`;
+  },
 };
 
 // console.log(naserObj2.calcAge(1990)); // 47
@@ -372,11 +374,10 @@ const naserObj2 = {
 }
 */
 
-// if we call calcAge method 4 times, it should better to store the computed result as 
-// a property so there is no need to calculate age 4 times and return the age from 
+// if we call calcAge method 4 times, it should better to store the computed result as
+// a property so there is no need to calculate age 4 times and return the age from
 // the computed property.
 console.log(naserObj2.calcAge()); // 47
-console.log(naserObj2.age); // 47
 console.log(naserObj2.age); // 47
 console.log(naserObj2.age); // 47
 console.log(naserObj2.age); // 47
@@ -409,42 +410,95 @@ const mark = {
   fullName: "Mark Miller",
   mass: 78,
   height: 1.69,
-  calcBMI: function (){
-    this.BMI = (this.mass / (this.height**2)).toFixed(2)    
-    return this.BMI
-  }
-}
+  calcBMI: function () {
+    this.BMI = (this.mass / this.height ** 2).toFixed(2);
+    return this.BMI;
+  },
+};
 
 const john = {
   fullName: "John Smith",
   mass: 92,
   height: 1.95,
-  calcBMI: function (){
-    this.BMI = (this.mass / (this.height**2)).toFixed(2)
-    return this.BMI
-  }
-}
+  calcBMI: function () {
+    this.BMI = (this.mass / this.height ** 2).toFixed(2);
+    return this.BMI;
+  },
+};
 
 const naserBmiObj = {
   fullName: "Naser Ahadi",
   mass: 72,
   height: 1.73,
-  calcBMI: function (){
-    this.BMI = (this.mass / (this.height**2)).toFixed(2)    
-    return this.BMI
-  }
-}
-mark.calcBMI()
-john.calcBMI()
-naserBmiObj.calcBMI()
+  calcBMI: function () {
+    this.BMI = (this.mass / this.height ** 2).toFixed(2);
+    return this.BMI;
+  },
+};
+mark.calcBMI();
+john.calcBMI();
+naserBmiObj.calcBMI();
 
 console.log(mark.BMI); // 27.31
 console.log(john.BMI); // 24.19
 console.log(naserBmiObj.BMI); // 24.06
 
-
-if(mark.BMI>john.BMI){
+if (mark.BMI > john.BMI) {
   console.log(`Mark's BMI (${mark.BMI}) is higher than John's (${john.BMI})!`);
 } else {
   console.log(`John's BMI (${john.BMI}) is higher than Mark's (${mark.BMI})!`);
+}
+
+/** 16. Iteration The for Loop **/
+// for (initialization; condition; afterthought) {
+//   // code block to be executed
+// }
+
+// for loops keep running while condition is TRUE
+for (let rep = 1; rep <= 10; rep++) {
+  console.log(`Lifting weights repetition ${rep}`);
+}
+
+/** 17. Looping Arrays, Breaking and Continuing **/
+const naser2 = [
+  "Naser",
+  "Ahadi",
+  2023 - 1990,
+  "programmer",
+  ["Abbas", "Ali", "Amin"],
+  true,
+];
+const types = [];
+
+for (let i = 0; i < naser2.length; i++) {
+  // Reading from naser2 array
+  console.log(naser2[i], typeof naser2[i]);
+
+  // Filling types array
+  // types[i] = typeof naser2[i]
+  types.push(typeof naser2[i]);
+}
+console.log(types); // ["string", "string", "number", "string", "object", "boolean"];
+
+const years3 = [1990, 2003, 1969, 2020];
+const ages = [];
+for (let i = 0; i < years3.length; i++) {
+  ages.push(2037 - years3[i]);
+}
+console.log(ages); // [47, 34, 68, 17];
+
+// continue and break
+// continue: with continue the current iteration of the loop is exited, and then the next one starts immediately.
+// break is used to completely terminate the whole loop.
+
+console.log("--- ONLY STRING ---");
+for (let i = 0; i < naser2.length; i++) {
+  if (typeof naser2[i] !== "string") continue;
+  console.log(naser2[i], typeof naser2[i]);
+}
+
+console.log("--- BREAK WITH NUMBER ---");
+for (let i = 0; i < naser2.length; i++) {
+  if (typeof naser2[i] === "number") break;
+  console.log(naser2[i], typeof naser2[i]);
 }
