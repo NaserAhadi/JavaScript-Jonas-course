@@ -502,3 +502,24 @@ for (let i = 0; i < naser2.length; i++) {
   if (typeof naser2[i] === "number") break;
   console.log(naser2[i], typeof naser2[i]);
 }
+
+/* 18. Looping Backwards and Loops in Loops */
+for(let i = naser2.length-1; i >= 0; i--){
+  console.log(i, naser2[i]);
+}
+/*
+5 true
+4 ['Abbas', 'Ali', 'Amin']
+3 'programmer'
+2 33
+1 'Ahadi'
+0 'Naser'
+*/
+
+for(let exercise = 1; exercise < 4; exercise ++){
+  console.log(`----- Starting Exercise ${exercise}`);
+
+  for(let rep = 0; rep < 6; rep++){
+    console.log(`Exercise ${exercise}: Lifting weigth number ${rep}`);
+  }
+}
