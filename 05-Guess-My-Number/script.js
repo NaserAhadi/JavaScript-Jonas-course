@@ -12,7 +12,7 @@ let number = document.querySelector(".number");
 let body = document.querySelector("body");
 
 let decreaseNumber = function () {
-  score.textContent = (score.textContent - 1).toString();
+  score.textContent -= 1;
 };
 
 let highScoreElement = document.querySelector(".highscore");
@@ -23,10 +23,11 @@ let againButton = document
   .addEventListener("click", function () {
     secretNumber = createSecretNumber();
     guess.value = "";
-    score.textContent = "20";
+    score.textContent = 20;
     number.textContent = "?";
     message.textContent = "Start guessing...";
     body.style.backgroundColor = "#222";
+    guess.disabled = false;
   });
 
 let checkButton = document
@@ -36,15 +37,18 @@ let checkButton = document
 
     if (!guessNumber) {
       message.textContent = "🛑 No Number!";
+    } else if (guessNumber < 1) {
+      message.textContent = "input number between 1 to 20";
     } else {
       if (guessNumber === secretNumber) {
         message.textContent = "🎉 Correct Guess";
         number.textContent = secretNumber;
         body.style.backgroundColor = "#60b347";
         if (Number(score.textContent) > Number(highScoreNumber)) {
-          highScoreNumber = score.textContent;
+          highScoreNumber = Number(score.textContent);
           highScoreElement.textContent = highScoreNumber;
         }
+        guess.disabled = true;
       } else if (guessNumber > secretNumber) {
         message.textContent = "↗️ Too High";
         decreaseNumber();
